@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgriTrack Pro</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginPage" class="loginPage">
+    <div class="loginBox">
+        <h1>🌿 AgriTrack Pro</h1>
+        <p>Smart Plantation Management</p>
+
+        <input type="text" id="username" placeholder="Admin Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+    </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboardPage" style="display:none;">
+
+<nav>
+    <div class="logo">🌿 AgriTrack</div>
+    <ul>
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#workers">Workers</a></li>
+        <li><a href="#attendance">Attendance</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#gps">GPS</a></li>
+        <li><a href="#reports">Reports</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Smart Coffee Plantation System</h1>
+    <p>RFID | GPS | Workforce Management</p>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+<h2>Dashboard</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fa fa-users"></i>
+<h3>Total Workers</h3>
+<h1 id="workerCount">0</h1>
+</div>
+
+<div class="card">
+<i class="fa fa-user-check"></i>
+<h3>Present</h3>
+<h1 id="presentCount">0</h1>
+</div>
+
+<div class="card">
+<i class="fa fa-list"></i>
+<h3>Tasks</h3>
+<h1 id="taskCount">0</h1>
+</div>
+
+<div class="card">
+<i class="fa fa-chart-line"></i>
+<h3>Efficiency</h3>
+<h1 id="efficiency">100%</h1>
+</div>
+
+</div>
+</section>
+
+<!-- WORKERS -->
+<section id="workers">
+<h2>Add Worker</h2>
+
+<div class="formBox">
+<input id="workerName" placeholder="Name">
+<input id="workerId" placeholder="ID">
+<input id="workerMobile" placeholder="Mobile">
+<input id="workerDept" placeholder="Department">
+
+<button onclick="addWorker()">Add Worker</button>
+</div>
+
+<table id="workerTable">
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Mobile</th>
+<th>Dept</th>
+</tr>
+</table>
+</section>
+
+<!-- ATTENDANCE -->
+<section id="attendance">
+<h2>Attendance</h2>
+
+<button onclick="checkIn()">Check In</button>
+<button onclick="checkOut()">Check Out</button>
+
+<table id="attendanceTable">
+<tr>
+<th>Time</th>
+<th>Status</th>
+</tr>
+</table>
+</section>
+
+<!-- TASKS -->
+<section id="tasks">
+<h2>Task Assignment</h2>
+
+<div class="formBox">
+<input id="taskWorker" placeholder="Worker Name">
+<input id="taskName" placeholder="Task">
+
+<button onclick="assignTask()">Assign</button>
+</div>
+
+<table id="taskTable">
+<tr>
+<th>Worker</th>
+<th>Task</th>
+<th>Status</th>
+</tr>
+</table>
+</section>
+
+<!-- GPS -->
+<section id="gps">
+<h2>GPS Tracking</h2>
+
+<div class="gpsBox">
+🟢 Worker A - Field 1<br>
+🟢 Worker B - Field 2<br>
+🟡 Worker C - Break<br>
+🔴 Worker D - Offline
+</div>
+</section>
+
+<!-- REPORTS -->
+<section id="reports">
+<h2>Reports</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Workers</h3>
+<h1 id="reportWorkers">0</h1>
+</div>
+
+<div class="card">
+<h3>Tasks</h3>
+<h1 id="reportTasks">0</h1>
+</div>
+
+</div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
