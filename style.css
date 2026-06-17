@@ -1,0 +1,124 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f4f7f5;
+}
+
+/* LOGIN */
+.loginPage{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#1b5e20,#43a047);
+}
+
+.loginBox{
+background:white;
+padding:40px;
+border-radius:15px;
+text-align:center;
+width:300px;
+}
+
+.loginBox input{
+width:100%;
+margin:10px 0;
+padding:10px;
+}
+
+.loginBox button{
+width:100%;
+padding:10px;
+background:#2e7d32;
+color:white;
+border:none;
+}
+
+/* NAV */
+nav{
+display:flex;
+justify-content:space-between;
+padding:15px;
+background:white;
+}
+
+nav ul{
+display:flex;
+gap:15px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:black;
+}
+
+/* HERO */
+.hero{
+height:50vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+}
+
+/* SECTIONS */
+section{
+padding:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+}
+
+.card{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:10px;
+}
+
+.formBox input{
+display:block;
+width:100%;
+margin:10px 0;
+padding:10px;
+}
+
+button{
+padding:10px;
+background:#2e7d32;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+table{
+width:100%;
+margin-top:10px;
+background:white;
+border-collapse:collapse;
+}
+
+th,td{
+padding:10px;
+border:1px solid #ddd;
+}
+
+.gpsBox{
+background:white;
+padding:20px;
+}
